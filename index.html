@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URA TIN Registration Portal</title>
+
+    <link rel="stylesheet" href="portal.css">
+</head>
+
+<body>
+
+
+    <header class="header">
+        <img src="ura-logo.png" alt="URA Logo">
+        <h1>TIN Registration Portal</h1>
+    </header>
+
+
+    <div class="info-bar">
+        Have your National ID ready before starting.
+    </div>
+
+    <main class="container">
+
+
+        <div class="taxpayer-options">
+
+            <input type="radio" id="individual" name="taxpayer" value="individual" checked>
+            <label for="individual">Individual Taxpayer</label>
+
+            <input type="radio" id="business" name="taxpayer" value="business">
+            <label for="business">Business Entity</label>
+
+        </div>
+
+
+        <form>
+
+            <fieldset>
+                <legend>Section A: Individual Taxpayer Details</legend>
+
+
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+
+
+                <label for="nin">NIN:</label>
+                <input type="text" id="nin" name="nin" pattern="[A-Z]{2}[A-Z0-9]{12}" maxlength="14" minlength="14"
+                    title="Enter two capital letters followed by twelve letters or digits" required>
+
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
+
+
+                <label>Gender:</label>
+                <div class="gender-options">
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="male">Male</label>
+
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+                </div>
+
+
+                <label for="district">District:</label>
+                <select id="district" name="district">
+                    <option value="">Select District</option>
+                    <option value="Kampala">Kampala</option>
+                    <option value="Wakiso">Wakiso</option>
+                    <option value="Mukono">Mukono</option>
+                    <option value="Jinja">Jinja</option>
+                    <option value="Mbarara">Mbarara</option>
+                </select>
+
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+
+
+                <label for="nationalid">Upload National ID:</label>
+                <input type="file" id="nationalid" name="nationalid" accept=".jpg,.pdf">
+
+
+                <button type="submit">Next</button>
+
+            </fieldset>
+
+        </form>
+
+    </main>
+
+</body>
+
+</html>
